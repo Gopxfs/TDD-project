@@ -1,5 +1,5 @@
 # TDD Project
-In this project, I will implement a FizzBuzz project by doing TDD (Test-Driven Development).
+In this project, I will implement a FizzBuzz and some other classes by doing TDD (Test-Driven Development).
 
 ## Built With:
 - Ruby
