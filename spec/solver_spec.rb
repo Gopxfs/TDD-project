@@ -40,4 +40,30 @@ describe Solver do
       expect(@solver.reverse(true)).to raise_error("Argument should be a string.")
     end
   end
+
+  describe "#fizzbuzz" do
+    it "takes one argument (integer) and returns a string" do
+      expect(@solver.fizzbuzz(5).class).to eql String
+    end
+
+    it "returns 'fizz' if argument is divisible by 3" do
+      expect(@solver.fizzbuzz(3)).to eql "fizz"
+    end
+
+    it "returns 'buzz' if argument is divisible by 5" do
+      expect(@solver.fizzbuzz(5)).to eql "buzz"
+    end
+
+    it "returns 'fizzbuzz' if argument is divisible by 3 and 5" do
+      expect(@solver.fizzbuzz(15)).to eql "fizzbuzz"
+    end
+
+    it "returns the argument as an string, if none of the cases is true" do
+      expect(@solver.fizzbuzz(4)).to eql "4"
+    end
+
+    it "raises an exception if argument is not an integer" do
+      expect(@solver.fizzbuzz("a")).to raise_error("Argument should be an integer.")
+    end
+  end
 end
