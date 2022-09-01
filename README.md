@@ -19,6 +19,10 @@ To edit this project:
 - Edit the code as you want.
 
 ## Authors:
+:bust_in_silhouette: Fernanco César da Silva
+- GitHub: [@fernando-silvabr66](https://github.com/fernando-silvabr66)
+- LinkedIn: [https://linkedin.com/in/fernando-silvabr66](https://linkedin.com/in/fernando-silvabr66)
+
 :bust_in_silhouette: Gabriel Fonseca
 - Github: [@Gopxfs](https://github.com/Gopxfs)
 - Linkedin: [Gabriel Fonseca](https://www.linkedin.com/in/gabriel-fonseca-sales)
