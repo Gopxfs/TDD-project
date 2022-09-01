@@ -12,4 +12,12 @@ class Solver
     end
     result
   end
+
+  def reverse(word)
+    unless word.class == String
+      raise InvalidArgumentError, "Argument should be a string."
+    end
+
+    word.reverse
+  end
 end
