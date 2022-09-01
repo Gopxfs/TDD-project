@@ -2,8 +2,8 @@ require_relative './errors'
 
 class Solver
   def factorial(number)
-    unless number.class == Integer && number >= 0
-      raise InvalidArgumentError, "Argument should be a positive integer."
+    unless number.instance_of?(Integer) && number >= 0
+      raise InvalidArgumentError, 'Argument should be a positive integer.'
     end
 
     result = 1
@@ -14,29 +14,20 @@ class Solver
   end
 
   def reverse(word)
-    unless word.class == String
-      raise InvalidArgumentError, "Argument should be a string."
-    end
+    raise InvalidArgumentError, 'Argument should be a string.' unless word.instance_of?(String)
 
     word.reverse
   end
 
   def fizzbuzz(number)
-    unless number.class == Integer
-      raise InvalidArgumentError, "Argument should be an integer."
-    end
+    raise InvalidArgumentError, 'Argument should be an integer.' unless number.instance_of?(Integer)
 
     result = ''
 
-    if number%3 == 0
-      result += 'fizz'
-    end
-    if number%5 ==0
-      result +='buzz'
-    end
-    if result == ''
-      return number.to_s
-    end
+    result += 'fizz' if (number % 3).zero?
+    result += 'buzz' if (number % 5).zero?
+    return number.to_s if result == ''
+
     result
   end
 end
