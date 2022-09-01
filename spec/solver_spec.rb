@@ -1,7 +1,6 @@
 require_relative './spec_helper'
 
 describe Solver do
-  context 'Solver methods should return correct result' do
   before :each do
     @solver = Solver.new
   end
