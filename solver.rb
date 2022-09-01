@@ -20,4 +20,23 @@ class Solver
 
     word.reverse
   end
+
+  def fizzbuzz(number)
+    unless number.class == Integer
+      raise InvalidArgumentError, "Argument should be an integer."
+    end
+
+    result = ''
+
+    if number%3 == 0
+      result += 'fizz'
+    end
+    if number%5 ==0
+      result +='buzz'
+    end
+    if result == ''
+      return number.to_s
+    end
+    result
+  end
 end
