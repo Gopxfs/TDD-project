@@ -1,6 +1,7 @@
 require_relative './spec_helper'
 
 describe Solver do
+  context 'Solver methods should return correct result' do
   before :each do
     @solver = Solver.new
   end
@@ -26,6 +27,13 @@ describe Solver do
       expect { @solver.factorial(-1) }.to raise_error('Argument should be a positive integer.')
       expect { @solver.factorial('24') }.to raise_error('Argument should be a positive integer.')
       expect { @solver.factorial(nil) }.to raise_error('Argument should be a positive integer.')
+    end
+
+    it 'should calculate factorial of certain input as integer number' do
+      expect(@solver.factorial(2)).to eq 2
+      expect(@solver.factorial(5)).to eq 120
+      expect(@solver.factorial(10)).to eq 3_628_800
+      expect(@solver.factorial(15)).to eq 1_307_674_368_000
     end
   end
 
