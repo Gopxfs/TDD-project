@@ -22,10 +22,10 @@ describe Solver do
       expect(@solver.factorial(0)).to eql 1
     end
 
-    it "raises an exception if argument isn't a negative number" do
-      expect(@solver.factorial(-1)).to raise_error("Argument should be a positive number.")
-      expect(@solver.factorial("24")).to raise_error("Argument should be a positive number.")
-      expect(@solver.factorial(nil)).to raise_error("Argument should be a positive number.")
+    it "raises an error if argument isn't a positive number" do
+      expect{(@solver.factorial(-1))}.to raise_error("Argument should be a positive integer.")
+      expect{(@solver.factorial("24"))}.to raise_error"Argument should be a positive integer."
+      expect{(@solver.factorial(nil))}.to raise_error"Argument should be a positive integer."
     end
   end
 
