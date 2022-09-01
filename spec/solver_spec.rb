@@ -30,10 +30,10 @@ describe Solver do
     end
 
     it 'should calculate factorial of certain input as integer number' do
-      expect(@solver.factorial(2)).to eq 2
-      expect(@solver.factorial(5)).to eq 120
-      expect(@solver.factorial(10)).to eq 3_628_800
-      expect(@solver.factorial(15)).to eq 1_307_674_368_000
+      expect(@solver.factorial(2)).to eql 2
+      expect(@solver.factorial(5)).to eql 120
+      expect(@solver.factorial(10)).to eql 3_628_800
+      expect(@solver.factorial(15)).to eql 1_307_674_368_000
     end
   end
 
