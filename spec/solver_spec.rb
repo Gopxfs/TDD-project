@@ -24,8 +24,8 @@ describe Solver do
 
     it "raises an error if argument isn't a positive number" do
       expect{(@solver.factorial(-1))}.to raise_error("Argument should be a positive integer.")
-      expect{(@solver.factorial("24"))}.to raise_error"Argument should be a positive integer."
-      expect{(@solver.factorial(nil))}.to raise_error"Argument should be a positive integer."
+      expect{(@solver.factorial("24"))}.to raise_error("Argument should be a positive integer.")
+      expect{(@solver.factorial(nil))}.to raise_error("Argument should be a positive integer.")
     end
   end
 
@@ -35,9 +35,9 @@ describe Solver do
       expect(@solver.reverse("aKlqOrIfk")).to eql "kfIrOqlKa"
     end
 
-    it "raises an exception if argument is not a string" do
-      expect(@solver.reverse(5)).to raise_error("Argument should be a string.")
-      expect(@solver.reverse(true)).to raise_error("Argument should be a string.")
+    it "raises an error if argument is not a string" do
+      expect{(@solver.reverse(5))}.to raise_error("Argument should be a string.")
+      expect{(@solver.reverse(true))}.to raise_error("Argument should be a string.")
     end
   end
 
@@ -62,8 +62,8 @@ describe Solver do
       expect(@solver.fizzbuzz(4)).to eql "4"
     end
 
-    it "raises an exception if argument is not an integer" do
-      expect(@solver.fizzbuzz("a")).to raise_error("Argument should be an integer.")
+    it "raises an error if argument is not an integer" do
+      expect{(@solver.fizzbuzz("a"))}.to raise_error("Argument should be an integer.")
     end
   end
 end
